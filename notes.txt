@@ -1,0 +1,11 @@
+Running:
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/modules/users/files$ sudo puppet apply /vagrant/
+manifests/site.pp  --verbose --debug --modulepath=/vagrant/modules
+
+Had to use modulepath since the /vagrant/modules directory is not in puppet's default modulepath
+
+
+On recurse:
+false: default will set the mode, owner and group of the directory without touching any files inside it
+true: copies files from the source to the target directory and applies the mode owner and group settings to all existing files inside the target directory
+remote: copies the files from the source to the target directory, but does not touch any existing files in the target directory
